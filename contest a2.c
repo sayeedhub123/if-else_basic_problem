@@ -1,36 +1,22 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
+    int m, x;
 
-	int x;
+    scanf("%d", &m);
 
-	scanf("%d", &x);
+    while (m--)
 
-	while(x--){
-
-		int n, m, a=0, b=0, c=1, d=1, e=3, f=3, g=0;
-		scanf("%d %d", &n, &m);
-
-		a= n-2;
-		b = m-2;
-
-		while(e<b){
-			e += 3;
-			c++;
-		}
-
-		while(f<a){
-			f +=3;
-			d++;
-		}
-
-		g = c*d;
-
-		printf("%d\n", g);
+    {
+        scanf("%d", &x);
+        x = (x * 63 + 7492) * 5 - 498;
+        x /= 10;
+        if (x < 0)
+            x = -x;
+        printf("%d\n", x % 10);
+    }
 
 
-	}
-
-
-	return 0;
+    return 0;
 }
